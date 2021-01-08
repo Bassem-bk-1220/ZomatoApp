@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/img_details_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_details_restaurant"
+        android:layout_width="0dp"
+        android:layout_marginTop="20sp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_90"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_10"
+        app:layout_constraintTop_toBottomOf="@id/img_details_back" />
+
+    <TextView
+        android:id="@+id/tv_open"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/rating_bar_stars"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_10"
+        app:layout_constraintTop_toBottomOf="@+id/img_details_restaurant"
+        tools:text="open Now" />
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/rating_bar_stars"
+        style="@style/Widget.MaterialRatingBar.RatingBar"
+        android:layout_width="wrap_content"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:maxHeight="20dp"
+        android:numStars="5"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_90"
+        app:layout_constraintStart_toEndOf="@+id/tv_open"
+        app:layout_constraintTop_toBottomOf="@+id/img_details_restaurant" />
+
+    <TextView
+        android:id="@+id/tv_details_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_90"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_10"
+        app:layout_constraintTop_toBottomOf="@+id/tv_open"
+        tools:text="name restaurant " />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_90"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_10"
+        app:layout_constraintTop_toBottomOf="@+id/tv_details_name"
+        tools:text="Rue d'orange nr:8" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical_75"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <ImageView
+        android:id="@+id/img_details_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingStart="5dp"
+        android:src="@drawable/icon_call"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_25"
+        app:layout_constraintTop_toBottomOf="@id/tv_address" />
+
+    <ImageView
+        android:id="@+id/img_details_localite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingStart="10dp"
+        android:src="@drawable/icon_location"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_50"
+        app:layout_constraintStart_toEndOf="@+id/img_details_call"
+        app:layout_constraintTop_toBottomOf="@id/tv_address" />
+
+    <ImageView
+        android:id="@+id/img_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingStart="5dp"
+        android:src="@drawable/bookmark"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_50"
+        app:layout_constraintTop_toBottomOf="@id/tv_address"
+        app:tint="@color/colorBlack" />
+
+    <ImageView
+        android:id="@+id/img_add_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:paddingStart="10dp"
+        android:src="@drawable/icon_write"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_75"
+        app:layout_constraintStart_toEndOf="@+id/img_favorite"
+        app:layout_constraintTop_toBottomOf="@id/tv_address" />
+
+    <TextView
+        android:id="@+id/tv_review"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="Reviews"
+        android:textColor="@color/colorBlack"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical_90"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_10"
+        app:layout_constraintTop_toBottomOf="@id/img_add_review" />
+
+    <TextView
+        android:id="@+id/tv_link_details_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="25dp"
+        android:text="See all reviews"
+        android:textColor="@color/colorAccent"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintEnd_toStartOf="@id/img_details_next"
+        app:layout_constraintStart_toEndOf="@id/tv_review"
+        app:layout_constraintTop_toBottomOf="@+id/img_add_review" />
+
+    <ImageView
+        android:id="@+id/img_details_next"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/next"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_90"
+        app:layout_constraintTop_toBottomOf="@id/img_add_review"
+        app:tint="@color/colorAccent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_reviews"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical_10"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical_90"
+        app:layout_constraintTop_toBottomOf="@id/tv_review"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/item_review"
+        tools:itemCount="2"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

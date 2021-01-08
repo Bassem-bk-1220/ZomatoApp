@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">zomato_app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_third_screen_description">You\'ll get the best dishes choose whichever you want</string>
+    <string name="text_third_screen_title">Choose Your Meal</string>
+    <string name="skip">Skip</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="zomato_application">Zomato application</string>
+    <string name="your_location">Your Location</string>
+    <string name="restaurant">Restaurant</string>
+    <string name="cafe_amp_bar"><![CDATA[Cafe&Bar]]></string>
+    <string name="food_cars">Food Cars</string>
+    <string name="coffee">Coffee</string>
+
+    <string name="API_KEY_MAP">AIzaSyCPQHWPe9N0lzDCBdjLWy_TDQhC4oyRRtg</string>
+</resources>
